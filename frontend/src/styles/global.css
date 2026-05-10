@@ -97,14 +97,25 @@ button {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 0.9rem;
-  background: linear-gradient(135deg, #0f766e, #1d4ed8);
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  flex-shrink: 0;
+}
+
+.brand-avatar {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .brand strong,
@@ -157,6 +168,13 @@ button {
   background: var(--accent-soft);
   color: var(--accent);
   font-weight: 700;
+}
+
+.user-chip img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  object-fit: cover;
 }
 
 .primary-button,
@@ -261,6 +279,17 @@ button {
 
 .dashboard-theme-toggle {
   flex-shrink: 0;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-code {
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .auth-hero h1,

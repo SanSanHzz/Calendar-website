@@ -36,6 +36,7 @@ export function AuthProvider({ children }) {
     const callbackToken = hashParams.get("token");
     const email = hashParams.get("email");
     const name = hashParams.get("name");
+    const picture = hashParams.get("picture");
 
     if (!callbackToken) {
       return;
@@ -44,6 +45,7 @@ export function AuthProvider({ children }) {
     const nextUser = {
       name: name || email?.split("@")[0] || "Google User",
       email: email || "",
+      picture: picture || null,
     };
 
     login(callbackToken, nextUser);
